@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso HTML5-CSS3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container shadow">
+        <header>
+            <div class="row align-items-center">
+                <div class="col-3"><img src="img/logohtml2.png" alt="logo" width="200"></div>
+                <div class="col-9">
+                    <span id="btnmenu" onclick="opendrawer()">&#9776;</span>
+                    <nav id="menu">
+                        <ul class="text-right">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="parrafos.html">Párrafos</a></li>
+                            <li><a href="enlaces.html">Enlaces</a></li>
+                            <li><a href="listas.html">Listas</a></li>
+                            <li><a href="tablas.html">Tablas</a></li>
+                            <li><a href="formularios.html">Formularios</a></li>
+                            <li><a href="multimedia.html">Multimedia</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </header>
+        <main class="shadow">
+            <div class="px-3">
+                <p></p>
+                <h1 class="text-center bg-azul-o text-white py-3 style-box">HTML5 & CSS3</h1>
+            </div>
+            <div class="px-3">
+                <hr>
+            </div>
+            <div class="p-3">
+                <div id="formularios" class="py-3">
+                    <h2 class="text-center">FORMULARIOS</h2>
+                    <form action="kk.php" method="get" class="form-login">
+                        <h3>Formulario de Login</h3>
+                        <fieldset>
+                            <legend>
+                                Login
+                            </legend>
+                            <p>Nombre: <input type="text" name="nombre" id=""></p>
+                            <p>Contraseña: <input type="password" name="clave" id=""></p>
+                            <p><input type="submit" value="Login" class="btn btn-blue"></p>
+                        </fieldset>
+
+                    </form>
+                    <form action="kk.php" method="get" class="form-registro">
+                        <h3>Formulario registro</h3>
+                        <fieldset>
+                            <legend>
+                                Registro
+                            </legend>
+                            <p><label for="">input type text</label>
+                                <input type="text" name="nombre" id="" placeholder="Name">
+                            </p>
+                            <p><label for="">input type password</label>
+                                <input type="password" name="clave" id="" placeholder="Password">
+                            </p>
+                            <p>Fecha Nacimiento: (Lista simple -> tag select)
+                                <select name="dia" id="">
+                                    <option value="1">1</option>
+                                    <option value="1">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <select name="mes" id="">
+                                    <option value="1">Enero</option>
+                                    <option value="2">Febrero</option>
+                                    <option value="3">Marzo</option>
+                                    <option value="4">Abril</option>
+                                </select>
+                                <select name="anio" id="">
+                                    <option value="2001">2001</option>
+                                    <option value="2002">2002</option>
+                                </select>
+                            <p>Comentarios (tag textarea):<br><textarea name="comentarios" id="" cols="50"
+                                    rows="4"></textarea></p>
+                            <p>Aficiones: (tag input type checkbox)<br>
+                                <input type="checkbox" name="cine" id=""> Cine <br>
+                                <input type="checkbox" name="deportes" id=""> Deportes <br>
+                                <input type="checkbox" name="lectura" id=""> Lectura <br>
+                                <input type="checkbox" name="viajar" id=""> Viajar <br>
+                            </p>
+                            <p>Estado civil: (tag input type radio)</p>
+                            <input type="radio" name="ec" id=""> Casado/a <br>
+                            <input type="radio" name="ec" id=""> Soltero/a <br>
+                            <input type="radio" name="ec" id=""> Viudo/a <br>
+                            <input type="radio" name="ec" id=""> Otros <br>
+                            </p>
+                            <p>Provincia: (tag select multiple)<br></p>
+                            <select name="provincia" id="" multiple size="5">
+                                <option value="1">Albacete</option>
+                                <option value="1">Ciudad Real</option>
+                                <option value="3">Cuenca</option>
+                                <option value="1">Guadalajara</option>
+                                <option value="1">Toledo</option>
+                            </select>
+                            <p>Foto: (tag input type file) <input type="file" name="foto" id=""></p>
+                            <p><input type="submit" value="Enviar" class="btn btn-blue"></p>
+                        </fieldset>
+                    </form>
+                    <div class="cb"></div>
+                    <h3 class="text-center">FORMULARIO CON ELEMENTOS HTML5:</h3>
+                    <form action="kk.php" method="post" class="form-html5">
+                        <fieldset>
+                            <legend>Inputs HTML5</legend>
+                            <p><label for="">Color:</label> <input type="color" name="color" id=""></p>
+                            <p><label for="">Date:</label> <input type="date" name="date" id=""></p>
+                            <p><label for="">Datetime:</label> <input type="datetime" name="datetime" id=""></p>
+                            <p><label for="">Datetime-local:</label> <input type="datetime-local" name="datetime-local"
+                                    id=""></p>
+                            <p><label for="">Email:</label> <input type="email" name="email" id=""></p>
+                            <p><label for="">Month:</label> <input type="month" name="month" id=""></p>
+                            <p><label for="">Number:</label> <input type="number" name="number" id="" step="2" min="10"
+                                    max="30"></p>
+                            <p><label for="">Range:</label> <input type="range" name="range" id="" step="2" min="10"
+                                    max="30"></p>
+                            <p><label for="">Tel:</label> <input type="tel" name="tel" id=""></p>
+                            <p><label for="">Time:</label> <input type="time" name="time" id=""></p>
+                            <p><label for="">Url:</label> <input type="url" name="url" id=""></p>
+                            <p><label for="">Week:</label> <input type="week" name="week" id=""></p>
+                            <p><input type="submit" value="Aceptar" id="" class="btn btn-red"></p>
+                        </fieldset>
+                    </form>
+
+                    <h1 class="text-center">Formulario</h1>
+                    <table border="10" class="centrar">
+                        <th>
+                            <form class="formu">
+                                <table border="0">
+                                    <tr>
+                                        <th>Nombre:</th>
+                                        <td><input type="text" size="20" name="Nombre"
+                                                placeholder="Escribe aqui tu nombre"></td>
+                                        <th>Apellidos:</th>
+                                        <td colspan="2"><input type="text" size="39" name="apellido"
+                                                placeholder="Escribe aqui tus apellidos"></td>
+                                        </duv>
+                                    </tr>
+                                    <tr>
+                                        <th>Fecha de nacimiento:</th>
+                                        <td>
+                                            <select name="dia">
+                                                <option value="ninguno" selected></option>
+                                                <option value="uno">1</option>
+                                                <option value="dos">2</option>
+                                                <option value="tres">3</option>
+                                                <option value="cuatro">4</option>
+                                                <option value="cinco">5</option>
+                                                <option value="seis">6</option>
+                                                <option value="siete">7</option>
+                                                <option value="ocho">8</option>
+                                                <option value="nueve">9</option>
+                                                <option value="diez">10</option>
+                                                <option value="once">11</option>
+                                                <option value="doce">12</option>
+                                                <option value="trece">13</option>
+                                                <option value="catorce">14</option>
+                                                <option value="quince">15</option>
+                                                <option value="dieciseis">16</option>
+                                                <option value="diecisiete">17</option>
+                                                <option value="dieciocho">18</option>
+                                                <option value="diecinueve">19</option>
+                                                <option value="veinte">20</option>
+                                                <option value="veintiuno">21</option>
+                                                <option value="veintidos">22</option>
+                                                <option value="veintitres">23</option>
+                                                <option value="veinticuatro">24</option>
+                                                <option value="veinticinco">25</option>
+                                                <option value="veintiseis">26</option>
+                                                <option value="veintisiete">27</option>
+                                                <option value="veintiocho">28</option>
+                                                <option value="veintinueve">29</option>
+                                                <option value="treinta">30</option>
+                                                <option value="treinta y uno">31</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="mes">
+                                                <option value="ninguno" selected></option>
+                                                <option value="Enero">Enero</option>
+                                                <option value="Febrero">Febrero</option>
+                                                <option value="Marzo">Marzo</option>
+                                                <option value="Abril">Abril</option>
+                                                <option value="Mayo">Mayo</option>
+                                                <option value="Junio">Junio</option>
+                                                <option value="Julio">Julio</option>
+                                                <option value="Agosto">Agosto</option>
+                                                <option value="Septiembre">Septiembre</option>
+                                                <option value="Octubre">Octubre</option>
+                                                <option value="Noviembre">Noviembre</option>
+                                                <option value="Diciembre">Diciembre</option>
+                                            </select>
+                                        </td>
+                                        <td colspan="2">
+                                            <select name="año">
+                                                <option value="ninguno" selected></option>
+                                                <option value="1960">1960</option>
+                                                <option value="1961">1961</option>
+                                                <option value="1962">1962</option>
+                                                <option value="1963">1963</option>
+                                                <option value="1964">1964</option>
+                                                <option value="1965">1965</option>
+                                                <option value="1966">1966</option>
+                                                <option value="1967">1967</option>
+                                                <option value="1968">1968</option>
+                                                <option value="1969">1969</option>
+                                                <option value="1970">1970</option>
+                                                <option value="1971">1971</option>
+                                                <option value="1972">1972</option>
+                                                <option value="1973">1973</option>
+                                                <option value="1974">1974</option>
+                                                <option value="1975">1975</option>
+                                                <option value="1976">1976</option>
+                                                <option value="1977">1977</option>
+                                                <option value="1978">1978</option>
+                                                <option value="1979">1979</option>
+                                                <option value="1980">1980</option>
+                                                <option value="1881">1881</option>
+                                                <option value="1882">1982</option>
+                                                <option value="1983">1983</option>
+                                                <option value="1984">1984</option>
+                                                <option value="1985">1985</option>
+                                                <option value="1986">1986</option>
+                                                <option value="1967">1987</option>
+                                                <option value="1988">1988</option>
+                                                <option value="1989">1989</option>
+                                                <option value="1990">1990</option>
+                                                <option value="1991">1991</option>
+                                                <option value="1992">1992</option>
+                                                <option value="1993">1993</option>
+                                                <option value="1994">1994</option>
+                                                <option value="1995">1995</option>
+                                                <option value="1996">1996</option>
+                                                <option value="1997">1997</option>
+                                                <option value="1998">1998</option>
+                                                <option value="1999">1999</option>
+                                                <option value="2000">2000</option>
+                                                <option value="2001">2001</option>
+                                                <option value="2002">2002</option>
+                                                <option value="2003">2003</option>
+                                                <option value="2004">2004</option>
+                                                <option value="2005">2005</option>
+                                                <option value="2006">2006</option>
+                                                <option value="2007">2007</option>
+                                                <option value="2008">2008</option>
+                                                <option value="2009">2009</option>
+                                                <option value="2010">2010</option>
+                                                <option value="2011">2011</option>
+                                                <option value="2012">2012</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2021">2021</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Direccion:</th>
+                                        <td colspan="2"><input type="text" size="45" name="direccion" colspan="2"
+                                                placeholder="Calle, Plaza, Travesía, Número, Piso..."></td>
+                </div>
+                <th>Poblacion:</th>
+                <td><input type="text" name="Poblacion" placeholder="Toledo"></td>
+                </tr>
+                <tr>
+                    <th>Telefono:</th>
+                    <td><input type="text" name="telefono" placeholder="Número de teléfono"></td>
+                    <th>Correo electronico:</th>
+                    <td colspan="2"><input type="text" size="39" name="correoelectronico"
+                            placeholder="ejemplo@correo.es"></td>
+            </div>
+            </tr>
+            <tr>
+                <th>Genero:</th>
+                <td><input type="radio" name="género" value="Hombre">Hombre</td>
+                <td><input type="radio" name="género" value="Mujer">Mujer</td>
+                <td colspan="2"><input type="radio" name="género" value="Otro" checked>Otro</td>
+            </tr>
+            <tr>
+                <th>Curso:</th>
+                <td><select name="Tu curso">
+    </div>
+    <option value="ninguno" selected></option>
+    <option value="Primero DAW">Primero DAW</option>
+    <option value="Segundo DAW">Segundo DAW</option>
+    <option value="Primero DAM">Primero DAM</option>
+    <option value="Segundo DAM">Segundo DAM</option>
+    </select></td>
+    <th>Turno:</th>
+    <td colspan="2"><select name="Turno"></div>
+            <option value="ninguno" selected></option>
+            <option value="Diurno">Diurno</option>
+            <option value="Vespertino">Vespertino</option>
+        </select></td>
+    </tr>
+    <tr>
+        <th>Materias operativas:</th>
+        </div>
+        <td><input type="checkbox" name="Ingles">Ingles</td>
+        </div>
+        <td><input type="checkbox" name="Frances">Francés</td>
+        </div>
+        <td><input type="checkbox" name="Aleman">Alemán</td>
+        </div>
+        <td><input type="checkbox" name="Educacionfisica">Educación Física</td>
+        </div>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="Administracion">Administración</td>
+        </div>
+        <td><input type="checkbox" name=">Historia">Historia</td>
+        </div>
+        <td><input type="checkbox" name="Astronomia">Astronomía</td>
+        </div>
+        <td><input type="checkbox" name="Filosofia">Filosofía</td>
+        </div>
+        <td><input type="checkbox" name="Religion">Religión</td>
+        </div>
+    </tr>
+    <tr>
+        <td><input type="submit" value="Aceptar" id=""></td>
+        <td><input type="button" value="Cerrar" onclick="window.close();"></td>
+        <td><input type="button" value="Web del centro" onclick="window.location.href='http://www.ies-azarquiel.es/'">
+        </td>
+        <td colspan="2"><input type="button" value="Ir a Google"
+                onclick="window.location.href='https://www.google.com/'"></td>
+    </tr>
+    </table>
+    </form>
+    </th>
+    </table>
+    </div>
+    </div>
+
+    </main>
+    <footer>
+        <h1 class="bg-azul-o text-center text-white py-3">&copy; Daniel Marín</h1>
+    </footer>
+    </div>
+    <script>
+        function opendrawer() {
+            document.getElementById('menu').style.display = 'block';
+            document.getElementById('menu').style.witdh = '100%';
+        }
+    </script>
+</body>
+
+</html>
